@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../../administrator/view/home_administrator.dart';
-
+import 'package:surat_app/auth/view/home_login.dart';
+import 'package:surat_app/helper/color.dart';
 
 
 class SplashScreen extends StatefulWidget {
@@ -27,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
     // ignore: use_build_context_synchronously
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-        builder: (context) => const HomeAdministrator(),
+        builder: (context) => const HomeLogin(),
       ),
     );
   }
@@ -40,13 +39,14 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/image/splash_img.png', height: 200,),
+            Image.asset('assets/icon/mail.png', height: 200,),
             const SizedBox(height: 20,),
             const Text(
-              'Office Intern',
+              'OFFICE INTERN',
               style: TextStyle(
-                color: Colors.black,
-                fontSize: 24.0,
+                color: primaryColor,
+                fontSize: 26.0,
+                fontWeight: FontWeight.w600
               ),
             ),
           ],

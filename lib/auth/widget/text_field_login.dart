@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:surat_app/helper/color.dart';
 
 class TextFieldLogin extends StatelessWidget {
   final String hinttxt;
@@ -13,19 +14,22 @@ class TextFieldLogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(12)
+      ),
       child: TextField(
         obscureText: obs,
         textAlign: TextAlign.center,
         keyboardType: TextInputType.text,
         decoration: InputDecoration(
           hintText: hinttxt,
-          hintStyle: const TextStyle(fontSize: 16, color:  Color.fromARGB(255, 76, 86, 224)),
-          prefixIcon: Icon(prefixIcon, color: const Color.fromARGB(255, 76, 86, 224),),
+          hintStyle: const TextStyle(fontSize: 16, color:  primaryColor),
+          prefixIcon: Icon(prefixIcon, color: primaryColor,),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(12),
             borderSide: const BorderSide(
-                width: 1, style: BorderStyle.none, color:  Color.fromARGB(255, 76, 86, 224)),
+                width: 1, style: BorderStyle.none, color:  primaryColor),
           ),
         ),
       ),
